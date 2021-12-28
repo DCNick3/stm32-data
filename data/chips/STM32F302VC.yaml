@@ -216,16 +216,6 @@ cores:
             register: AHBRSTR
             field: ADC1RST
       pins:
-      - pin: PC0
-        signal: IN6
-      - pin: PC1
-        signal: IN7
-      - pin: PC2
-        signal: IN8
-      - pin: PC3
-        signal: IN9
-      - pin: PF2
-        signal: IN10
       - pin: PA0
         signal: IN1
       - pin: PA1
@@ -234,6 +224,36 @@ cores:
         signal: IN3
       - pin: PA3
         signal: IN4
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN6
+      - pin: PC1
+        signal: IN7
+      - pin: PC2
+        signal: IN8
+      - pin: PC3
+        signal: IN9
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
+      - pin: PF2
+        signal: IN10
       - pin: PF4
         signal: IN5
       interrupts: {}
@@ -243,16 +263,6 @@ cores:
     ADC2:
       address: 0x50000100
       pins:
-      - pin: PC0
-        signal: IN6
-      - pin: PC1
-        signal: IN7
-      - pin: PC2
-        signal: IN8
-      - pin: PC3
-        signal: IN9
-      - pin: PF2
-        signal: IN10
       - pin: PA4
         signal: IN1
       - pin: PA5
@@ -261,12 +271,42 @@ cores:
         signal: IN3
       - pin: PA7
         signal: IN4
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB2
+        signal: IN12
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN6
+      - pin: PC1
+        signal: IN7
+      - pin: PC2
+        signal: IN8
+      - pin: PC3
+        signal: IN9
       - pin: PC4
         signal: IN5
       - pin: PC5
         signal: IN11
-      - pin: PB2
-        signal: IN12
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
+      - pin: PF2
+        signal: IN10
       interrupts:
         GLOBAL: ADC1_2
       dma_channels:
@@ -315,8 +355,16 @@ cores:
       address: 0x4001001c
       pins:
       - pin: PA0
+        signal: INM
+      - pin: PA0
         signal: OUT
         af: 8
+      - pin: PA1
+        signal: INP
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
       - pin: PA6
         signal: OUT
         af: 8
@@ -334,8 +382,18 @@ cores:
       address: 0x40010020
       pins:
       - pin: PA2
+        signal: INM
+      - pin: PA2
         signal: OUT
         af: 8
+      - pin: PA3
+        signal: INP
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
+      - pin: PA7
+        signal: INP
       - pin: PA7
         signal: OUT
         af: 8
@@ -350,19 +408,43 @@ cores:
     COMP4:
       address: 0x40010028
       pins:
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
+      - pin: PB0
+        signal: INP
       - pin: PB1
         signal: OUT
         af: 8
+      - pin: PB2
+        signal: INM
+      - pin: PE7
+        signal: INP
+      - pin: PE8
+        signal: INM
       interrupts: {}
     COMP6:
       address: 0x40010030
       pins:
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
       - pin: PA10
         signal: OUT
         af: 8
+      - pin: PB11
+        signal: INP
+      - pin: PB15
+        signal: INM
       - pin: PC6
         signal: OUT
         af: 7
+      - pin: PD10
+        signal: INM
+      - pin: PD11
+        signal: INP
       interrupts:
         GLOBAL: COMP4_6
     CRC:
@@ -379,6 +461,18 @@ cores:
       pins:
       - pin: PA4
         signal: OUT1
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
+      - pin: PD9
+        signal: EXTI9
+      - pin: PE9
+        signal: EXTI9
+      - pin: PF9
+        signal: EXTI9
       interrupts:
         GLOBAL: TIM6_DAC
       dma_channels:
@@ -636,18 +730,18 @@ cores:
         signal: VINP
       - pin: PA7
         signal: VINP_SEC
+      - pin: PB0
+        signal: VINP
+      - pin: PB0
+        signal: VINP_SEC
+      - pin: PB14
+        signal: VINP
+      - pin: PB14
+        signal: VINP_SEC
       - pin: PC5
         signal: VINM
       - pin: PC5
         signal: VINM_SEC
-      - pin: PB0
-        signal: VINP
-      - pin: PB0
-        signal: VINP_SEC
-      - pin: PB14
-        signal: VINP
-      - pin: PB14
-        signal: VINP_SEC
       - pin: PD14
         signal: VINP
       - pin: PD14
@@ -671,17 +765,37 @@ cores:
       - pin: PA8
         signal: MCO
         af: 0
+      - pin: PC14
+        signal: OSC32_IN
+      - pin: PC15
+        signal: OSC32_OUT
+      - pin: PF0
+        signal: OSC_IN
+      - pin: PF1
+        signal: OSC_OUT
       interrupts:
         GLOBAL: RCC
     RTC:
       address: 0x40002800
       pins:
+      - pin: PA0
+        signal: TAMP2
       - pin: PA1
         signal: REFIN
         af: 0
       - pin: PB15
         signal: REFIN
         af: 0
+      - pin: PC13
+        signal: OUT_ALARM
+      - pin: PC13
+        signal: OUT_CALIB
+      - pin: PC13
+        signal: TAMP1
+      - pin: PC13
+        signal: TS
+      - pin: PE6
+        signal: TAMP3
       interrupts:
         GLOBAL: TAMP_STAMP
     SPI1:

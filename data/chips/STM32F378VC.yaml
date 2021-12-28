@@ -208,6 +208,32 @@ cores:
             register: AHBRSTR
             field: ADC1RST
       pins:
+      - pin: PA0
+        signal: IN0
+      - pin: PA1
+        signal: IN1
+      - pin: PA2
+        signal: IN2
+      - pin: PA3
+        signal: IN3
+      - pin: PA4
+        signal: IN4
+      - pin: PA5
+        signal: IN5
+      - pin: PA6
+        signal: IN6
+      - pin: PA7
+        signal: IN7
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB0
+        signal: IN8
+      - pin: PB1
+        signal: IN9
+      - pin: PB15
+        signal: EXTI15
       - pin: PC0
         signal: IN10
       - pin: PC1
@@ -216,30 +242,22 @@ cores:
         signal: IN12
       - pin: PC3
         signal: IN13
-      - pin: PA2
-        signal: IN2
-      - pin: PA5
-        signal: IN5
       - pin: PC4
         signal: IN14
-      - pin: PA0
-        signal: IN0
-      - pin: PA3
-        signal: IN3
-      - pin: PA6
-        signal: IN6
       - pin: PC5
         signal: IN15
-      - pin: PA1
-        signal: IN1
-      - pin: PA4
-        signal: IN4
-      - pin: PA7
-        signal: IN7
-      - pin: PB0
-        signal: IN8
-      - pin: PB1
-        signal: IN9
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC1
       dma_channels:
@@ -298,8 +316,12 @@ cores:
       address: 0x4001001c
       pins:
       - pin: PA0
+        signal: INM
+      - pin: PA0
         signal: OUT
         af: 8
+      - pin: PA1
+        signal: INP
       - pin: PA6
         signal: OUT
         af: 8
@@ -315,8 +337,12 @@ cores:
       address: 0x4001001e
       pins:
       - pin: PA2
+        signal: INM
+      - pin: PA2
         signal: OUT
         af: 8
+      - pin: PA3
+        signal: INP
       - pin: PA7
         signal: OUT
         af: 8
@@ -349,10 +375,22 @@ cores:
             register: APB1RSTR
             field: DAC1RST
       pins:
-      - pin: PA5
-        signal: OUT2
       - pin: PA4
         signal: OUT1
+      - pin: PA5
+        signal: OUT2
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
+      - pin: PD9
+        signal: EXTI9
+      - pin: PE9
+        signal: EXTI9
+      - pin: PF9
+        signal: EXTI9
       interrupts: {}
       dma_channels:
         CH1:
@@ -375,6 +413,18 @@ cores:
       pins:
       - pin: PA6
         signal: OUT1
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
+      - pin: PD9
+        signal: EXTI9
+      - pin: PE9
+        signal: EXTI9
+      - pin: PF9
+        signal: EXTI9
       interrupts:
         GLOBAL: TIM18_DAC2
       dma_channels:
@@ -576,9 +626,6 @@ cores:
       - pin: PF6
         signal: SCL
         af: 4
-      - pin: PF7
-        signal: SDA
-        af: 4
       interrupts:
         ER: I2C2_ER
         EV: I2C2_EV
@@ -609,17 +656,37 @@ cores:
       - pin: PA8
         signal: MCO
         af: 0
+      - pin: PC14
+        signal: OSC32_IN
+      - pin: PC15
+        signal: OSC32_OUT
+      - pin: PF0
+        signal: OSC_IN
+      - pin: PF1
+        signal: OSC_OUT
       interrupts:
         GLOBAL: RCC
     RTC:
       address: 0x40002800
       pins:
+      - pin: PA0
+        signal: TAMP2
       - pin: PA1
         signal: REFIN
         af: 0
       - pin: PB15
         signal: REFIN
         af: 0
+      - pin: PC13
+        signal: OUT_ALARM
+      - pin: PC13
+        signal: OUT_CALIB
+      - pin: PC13
+        signal: TAMP1
+      - pin: PC13
+        signal: TS
+      - pin: PE6
+        signal: TAMP3
       interrupts:
         GLOBAL: TAMP_STAMP
     SDADC1:
@@ -633,6 +700,51 @@ cores:
           reset:
             register: APB2RSTR
             field: SDADC1RST
+      pins:
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB0
+        signal: AIN6P
+      - pin: PB1
+        signal: AIN5P
+      - pin: PB1
+        signal: AIN6M
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE7
+        signal: AIN3P
+      - pin: PE7
+        signal: AIN4M
+      - pin: PE8
+        signal: AIN8P
+      - pin: PE9
+        signal: AIN7P
+      - pin: PE9
+        signal: AIN8M
+      - pin: PE10
+        signal: AIN2P
+      - pin: PE11
+        signal: AIN1P
+      - pin: PE11
+        signal: AIN2M
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE12
+        signal: AIN0P
+      - pin: PE13
+        signal: AIN0M
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: SDADC1
       dma_channels:
@@ -649,6 +761,51 @@ cores:
           reset:
             register: APB2RSTR
             field: SDADC2RST
+      pins:
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB10
+        signal: AIN0M
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE7
+        signal: AIN5P
+      - pin: PE7
+        signal: AIN6M
+      - pin: PE8
+        signal: AIN8P
+      - pin: PE9
+        signal: AIN7P
+      - pin: PE9
+        signal: AIN8M
+      - pin: PE11
+        signal: AIN4P
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE12
+        signal: AIN3P
+      - pin: PE12
+        signal: AIN4M
+      - pin: PE13
+        signal: AIN2P
+      - pin: PE14
+        signal: AIN1P
+      - pin: PE14
+        signal: AIN2M
+      - pin: PE15
+        signal: AIN0P
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: SDADC2
       dma_channels:
@@ -665,6 +822,53 @@ cores:
           reset:
             register: APB2RSTR
             field: SDADC3RST
+      pins:
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB14
+        signal: AIN8P
+      - pin: PB15
+        signal: AIN7P
+      - pin: PB15
+        signal: AIN8M
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD8
+        signal: AIN6P
+      - pin: PD9
+        signal: AIN5P
+      - pin: PD9
+        signal: AIN6M
+      - pin: PD10
+        signal: AIN4P
+      - pin: PD11
+        signal: AIN3P
+      - pin: PD11
+        signal: AIN4M
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD12
+        signal: AIN2P
+      - pin: PD13
+        signal: AIN1P
+      - pin: PD13
+        signal: AIN2M
+      - pin: PD14
+        signal: AIN0P
+      - pin: PD15
+        signal: AIN0M
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: SDADC3
       dma_channels:
@@ -1768,9 +1972,6 @@ cores:
         signal: RX
         af: 7
       - pin: PD7
-        signal: CK
-        af: 7
-      - pin: PF7
         signal: CK
         af: 7
       interrupts:

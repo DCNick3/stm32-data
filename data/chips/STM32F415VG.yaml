@@ -214,14 +214,6 @@ cores:
             field: ADC1EN
       block: adc_v2/ADC
       pins:
-      - pin: PC0
-        signal: IN10
-      - pin: PC1
-        signal: IN11
-      - pin: PC2
-        signal: IN12
-      - pin: PC3
-        signal: IN13
       - pin: PA0
         signal: IN0
       - pin: PA1
@@ -238,14 +230,42 @@ cores:
         signal: IN6
       - pin: PA7
         signal: IN7
-      - pin: PC4
-        signal: IN14
-      - pin: PC5
-        signal: IN15
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
       - pin: PB0
         signal: IN8
       - pin: PB1
         signal: IN9
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN10
+      - pin: PC1
+        signal: IN11
+      - pin: PC2
+        signal: IN12
+      - pin: PC3
+        signal: IN13
+      - pin: PC4
+        signal: IN14
+      - pin: PC5
+        signal: IN15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -264,14 +284,6 @@ cores:
             field: ADC2EN
       block: adc_v2/ADC
       pins:
-      - pin: PC0
-        signal: IN10
-      - pin: PC1
-        signal: IN11
-      - pin: PC2
-        signal: IN12
-      - pin: PC3
-        signal: IN13
       - pin: PA0
         signal: IN0
       - pin: PA1
@@ -288,14 +300,42 @@ cores:
         signal: IN6
       - pin: PA7
         signal: IN7
-      - pin: PC4
-        signal: IN14
-      - pin: PC5
-        signal: IN15
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
       - pin: PB0
         signal: IN8
       - pin: PB1
         signal: IN9
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN10
+      - pin: PC1
+        signal: IN11
+      - pin: PC2
+        signal: IN12
+      - pin: PC3
+        signal: IN13
+      - pin: PC4
+        signal: IN14
+      - pin: PC5
+        signal: IN15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -314,14 +354,6 @@ cores:
             field: ADC3EN
       block: adc_v2/ADC
       pins:
-      - pin: PC0
-        signal: IN10
-      - pin: PC1
-        signal: IN11
-      - pin: PC2
-        signal: IN12
-      - pin: PC3
-        signal: IN13
       - pin: PA0
         signal: IN0
       - pin: PA1
@@ -330,6 +362,34 @@ cores:
         signal: IN2
       - pin: PA3
         signal: IN3
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN10
+      - pin: PC1
+        signal: IN11
+      - pin: PC2
+        signal: IN12
+      - pin: PC3
+        signal: IN13
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -371,12 +431,6 @@ cores:
         af: 9
       - pin: PD1
         signal: TX
-        af: 9
-      - pin: PH13
-        signal: TX
-        af: 9
-      - pin: PI9
-        signal: RX
         af: 9
       interrupts:
         RX0: CAN1_RX0
@@ -462,6 +516,16 @@ cores:
         signal: OUT1
       - pin: PA5
         signal: OUT2
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
+      - pin: PD9
+        signal: EXTI9
+      - pin: PE9
+        signal: EXTI9
       interrupts:
         GLOBAL: TIM6_DAC
     DBGMCU:
@@ -700,24 +764,6 @@ cores:
       - pin: PB12
         signal: SMBA
         af: 4
-      - pin: PF0
-        signal: SDA
-        af: 4
-      - pin: PF1
-        signal: SCL
-        af: 4
-      - pin: PF2
-        signal: SMBA
-        af: 4
-      - pin: PH4
-        signal: SCL
-        af: 4
-      - pin: PH5
-        signal: SDA
-        af: 4
-      - pin: PH6
-        signal: SMBA
-        af: 4
       interrupts:
         ER: I2C2_ER
         EV: I2C2_EV
@@ -751,15 +797,6 @@ cores:
         af: 4
       - pin: PC9
         signal: SDA
-        af: 4
-      - pin: PH7
-        signal: SCL
-        af: 4
-      - pin: PH8
-        signal: SDA
-        af: 4
-      - pin: PH9
-        signal: SMBA
         af: 4
       interrupts:
         ER: I2C3_ER
@@ -831,9 +868,6 @@ cores:
         af: 0
       - pin: PC13
         signal: AF1
-        af: 0
-      - pin: PI8
-        signal: AF2
         af: 0
       interrupts:
         GLOBAL: TAMP_STAMP
@@ -982,18 +1016,6 @@ cores:
         signal: MISO
         af: 5
       - pin: PC3
-        signal: MOSI
-        af: 5
-      - pin: PI0
-        signal: NSS
-        af: 5
-      - pin: PI1
-        signal: SCK
-        af: 5
-      - pin: PI2
-        signal: MISO
-        af: 5
-      - pin: PI3
         signal: MOSI
         af: 5
       interrupts:
@@ -1199,9 +1221,6 @@ cores:
       - pin: PB8
         signal: CH1
         af: 3
-      - pin: PF6
-        signal: CH1
-        af: 3
       interrupts:
         BRK: TIM1_UP_TIM10
         COM: TIM1_UP_TIM10
@@ -1221,9 +1240,6 @@ cores:
       block: timer_v1/TIM_GP16
       pins:
       - pin: PB9
-        signal: CH1
-        af: 3
-      - pin: PF7
         signal: CH1
         af: 3
       interrupts:
@@ -1250,12 +1266,6 @@ cores:
       - pin: PB15
         signal: CH2
         af: 9
-      - pin: PH6
-        signal: CH1
-        af: 9
-      - pin: PH9
-        signal: CH2
-        af: 9
       interrupts:
         BRK: TIM8_BRK_TIM12
         COM: TIM8_BRK_TIM12
@@ -1277,9 +1287,6 @@ cores:
       - pin: PA6
         signal: CH1
         af: 9
-      - pin: PF8
-        signal: CH1
-        af: 9
       interrupts:
         BRK: TIM8_UP_TIM13
         COM: TIM8_UP_TIM13
@@ -1299,9 +1306,6 @@ cores:
       block: timer_v1/TIM_GP16
       pins:
       - pin: PA7
-        signal: CH1
-        af: 9
-      - pin: PF9
         signal: CH1
         af: 9
       interrupts:
@@ -1536,18 +1540,6 @@ cores:
       - pin: PA3
         signal: CH4
         af: 2
-      - pin: PH10
-        signal: CH1
-        af: 2
-      - pin: PH11
-        signal: CH2
-        af: 2
-      - pin: PH12
-        signal: CH3
-        af: 2
-      - pin: PI0
-        signal: CH4
-        af: 2
       interrupts:
         BRK: TIM5
         COM: TIM5
@@ -1666,33 +1658,6 @@ cores:
         af: 3
       - pin: PC9
         signal: CH4
-        af: 3
-      - pin: PH13
-        signal: CH1N
-        af: 3
-      - pin: PH14
-        signal: CH2N
-        af: 3
-      - pin: PH15
-        signal: CH3N
-        af: 3
-      - pin: PI2
-        signal: CH4
-        af: 3
-      - pin: PI3
-        signal: ETR
-        af: 3
-      - pin: PI4
-        signal: BKIN
-        af: 3
-      - pin: PI5
-        signal: CH1
-        af: 3
-      - pin: PI6
-        signal: CH2
-        af: 3
-      - pin: PI7
-        signal: CH3
         af: 3
       interrupts:
         BRK: TIM8_BRK_TIM12
@@ -1998,27 +1963,6 @@ cores:
         af: 8
       - pin: PC8
         signal: CK
-        af: 8
-      - pin: PG7
-        signal: CK
-        af: 8
-      - pin: PG8
-        signal: RTS
-        af: 8
-      - pin: PG9
-        signal: RX
-        af: 8
-      - pin: PG12
-        signal: RTS
-        af: 8
-      - pin: PG13
-        signal: CTS
-        af: 8
-      - pin: PG14
-        signal: TX
-        af: 8
-      - pin: PG15
-        signal: CTS
         af: 8
       interrupts:
         GLOBAL: USART6

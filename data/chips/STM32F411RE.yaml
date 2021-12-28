@@ -208,14 +208,6 @@ cores:
             field: ADC1EN
       block: adc_v2/ADC
       pins:
-      - pin: PC0
-        signal: IN10
-      - pin: PC1
-        signal: IN11
-      - pin: PC2
-        signal: IN12
-      - pin: PC3
-        signal: IN13
       - pin: PA0
         signal: IN0
       - pin: PA1
@@ -232,14 +224,32 @@ cores:
         signal: IN6
       - pin: PA7
         signal: IN7
-      - pin: PC4
-        signal: IN14
-      - pin: PC5
-        signal: IN15
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
       - pin: PB0
         signal: IN8
       - pin: PB1
         signal: IN9
+      - pin: PB15
+        signal: EXTI15
+      - pin: PC0
+        signal: IN10
+      - pin: PC1
+        signal: IN11
+      - pin: PC2
+        signal: IN12
+      - pin: PC3
+        signal: IN13
+      - pin: PC4
+        signal: IN14
+      - pin: PC5
+        signal: IN15
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -452,9 +462,6 @@ cores:
       - pin: PB10
         signal: SCL
         af: 4
-      - pin: PB11
-        signal: SDA
-        af: 4
       - pin: PB12
         signal: SMBA
         af: 4
@@ -536,6 +543,14 @@ cores:
       - pin: PC9
         signal: MCO_2
         af: 0
+      - pin: PC14
+        signal: OSC32_IN
+      - pin: PC15
+        signal: OSC32_OUT
+      - pin: PH0
+        signal: OSC_IN
+      - pin: PH1
+        signal: OSC_OUT
       interrupts:
         GLOBAL: RCC
     RTC:
@@ -544,6 +559,8 @@ cores:
       - pin: PB15
         signal: REFIN
         af: 0
+      - pin: PC13
+        signal: AF1
       interrupts:
         GLOBAL: TAMP_STAMP
     SDIO:
@@ -725,9 +742,6 @@ cores:
       - pin: PC7
         signal: SCK
         af: 5
-      - pin: PD3
-        signal: SCK
-        af: 5
       interrupts:
         GLOBAL: SPI2
       dma_channels:
@@ -777,9 +791,6 @@ cores:
       - pin: PC12
         signal: MOSI
         af: 6
-      - pin: PD6
-        signal: MOSI
-        af: 5
       interrupts:
         GLOBAL: SPI3
       dma_channels:
@@ -818,30 +829,6 @@ cores:
       - pin: PB13
         signal: SCK
         af: 6
-      - pin: PE2
-        signal: SCK
-        af: 5
-      - pin: PE4
-        signal: NSS
-        af: 5
-      - pin: PE5
-        signal: MISO
-        af: 5
-      - pin: PE6
-        signal: MOSI
-        af: 5
-      - pin: PE11
-        signal: NSS
-        af: 5
-      - pin: PE12
-        signal: SCK
-        af: 5
-      - pin: PE13
-        signal: MISO
-        af: 5
-      - pin: PE14
-        signal: MOSI
-        af: 5
       interrupts:
         GLOBAL: SPI4
       dma_channels:
@@ -883,30 +870,6 @@ cores:
         signal: NSS
         af: 6
       - pin: PB8
-        signal: MOSI
-        af: 6
-      - pin: PE2
-        signal: SCK
-        af: 6
-      - pin: PE4
-        signal: NSS
-        af: 6
-      - pin: PE5
-        signal: MISO
-        af: 6
-      - pin: PE6
-        signal: MOSI
-        af: 6
-      - pin: PE11
-        signal: NSS
-        af: 6
-      - pin: PE12
-        signal: SCK
-        af: 6
-      - pin: PE13
-        signal: MISO
-        af: 6
-      - pin: PE14
         signal: MOSI
         af: 6
       interrupts:
@@ -987,33 +950,6 @@ cores:
         af: 1
       - pin: PB15
         signal: CH3N
-        af: 1
-      - pin: PE7
-        signal: ETR
-        af: 1
-      - pin: PE8
-        signal: CH1N
-        af: 1
-      - pin: PE9
-        signal: CH1
-        af: 1
-      - pin: PE10
-        signal: CH2N
-        af: 1
-      - pin: PE11
-        signal: CH2
-        af: 1
-      - pin: PE12
-        signal: CH3N
-        af: 1
-      - pin: PE13
-        signal: CH3
-        af: 1
-      - pin: PE14
-        signal: CH4
-        af: 1
-      - pin: PE15
-        signal: BKIN
         af: 1
       interrupts:
         BRK: TIM1_BRK_TIM9
@@ -1140,9 +1076,6 @@ cores:
       - pin: PB10
         signal: CH3
         af: 1
-      - pin: PB11
-        signal: CH4
-        af: 1
       interrupts:
         BRK: TIM2
         COM: TIM2
@@ -1263,21 +1196,6 @@ cores:
       - pin: PB9
         signal: CH4
         af: 2
-      - pin: PD12
-        signal: CH1
-        af: 2
-      - pin: PD13
-        signal: CH2
-        af: 2
-      - pin: PD14
-        signal: CH3
-        af: 2
-      - pin: PD15
-        signal: CH4
-        af: 2
-      - pin: PE0
-        signal: ETR
-        af: 2
       interrupts:
         BRK: TIM4
         COM: TIM4
@@ -1370,12 +1288,6 @@ cores:
       - pin: PA3
         signal: CH2
         af: 3
-      - pin: PE5
-        signal: CH1
-        af: 3
-      - pin: PE6
-        signal: CH2
-        af: 3
       interrupts:
         BRK: TIM1_BRK_TIM9
         COM: TIM1_BRK_TIM9
@@ -1458,21 +1370,6 @@ cores:
         signal: RX
         af: 7
       - pin: PA4
-        signal: CK
-        af: 7
-      - pin: PD3
-        signal: CTS
-        af: 7
-      - pin: PD4
-        signal: RTS
-        af: 7
-      - pin: PD5
-        signal: TX
-        af: 7
-      - pin: PD6
-        signal: RX
-        af: 7
-      - pin: PD7
         signal: CK
         af: 7
       interrupts:

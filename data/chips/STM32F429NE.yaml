@@ -226,38 +226,78 @@ cores:
             field: ADC1EN
       block: adc_v2/ADC
       pins:
-      - pin: PC3
-        signal: IN13
+      - pin: PA0
+        signal: IN0
+      - pin: PA1
+        signal: IN1
+      - pin: PA2
+        signal: IN2
+      - pin: PA3
+        signal: IN3
+      - pin: PA4
+        signal: IN4
+      - pin: PA5
+        signal: IN5
+      - pin: PA6
+        signal: IN6
+      - pin: PA7
+        signal: IN7
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB0
+        signal: IN8
+      - pin: PB1
+        signal: IN9
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
       - pin: PC0
         signal: IN10
       - pin: PC1
         signal: IN11
       - pin: PC2
         signal: IN12
-      - pin: PA1
-        signal: IN1
-      - pin: PA0
-        signal: IN0
-      - pin: PA4
-        signal: IN4
+      - pin: PC3
+        signal: IN13
       - pin: PC4
         signal: IN14
-      - pin: PA2
-        signal: IN2
-      - pin: PA6
-        signal: IN6
-      - pin: PA5
-        signal: IN5
       - pin: PC5
         signal: IN15
-      - pin: PA3
-        signal: IN3
-      - pin: PA7
-        signal: IN7
-      - pin: PB1
-        signal: IN9
-      - pin: PB0
-        signal: IN8
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
+      - pin: PF11
+        signal: EXTI11
+      - pin: PF15
+        signal: EXTI15
+      - pin: PG11
+        signal: EXTI11
+      - pin: PG15
+        signal: EXTI15
+      - pin: PH11
+        signal: EXTI11
+      - pin: PH15
+        signal: EXTI15
+      - pin: PI11
+        signal: EXTI11
+      - pin: PI15
+        signal: EXTI15
+      - pin: PJ11
+        signal: EXTI11
+      - pin: PJ15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -276,38 +316,78 @@ cores:
             field: ADC2EN
       block: adc_v2/ADC
       pins:
-      - pin: PC3
-        signal: IN13
+      - pin: PA0
+        signal: IN0
+      - pin: PA1
+        signal: IN1
+      - pin: PA2
+        signal: IN2
+      - pin: PA3
+        signal: IN3
+      - pin: PA4
+        signal: IN4
+      - pin: PA5
+        signal: IN5
+      - pin: PA6
+        signal: IN6
+      - pin: PA7
+        signal: IN7
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB0
+        signal: IN8
+      - pin: PB1
+        signal: IN9
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
       - pin: PC0
         signal: IN10
       - pin: PC1
         signal: IN11
       - pin: PC2
         signal: IN12
-      - pin: PA1
-        signal: IN1
-      - pin: PA0
-        signal: IN0
-      - pin: PA4
-        signal: IN4
+      - pin: PC3
+        signal: IN13
       - pin: PC4
         signal: IN14
-      - pin: PA2
-        signal: IN2
-      - pin: PA6
-        signal: IN6
-      - pin: PA5
-        signal: IN5
       - pin: PC5
         signal: IN15
-      - pin: PA3
-        signal: IN3
-      - pin: PA7
-        signal: IN7
-      - pin: PB1
-        signal: IN9
-      - pin: PB0
-        signal: IN8
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
+      - pin: PF11
+        signal: EXTI11
+      - pin: PF15
+        signal: EXTI15
+      - pin: PG11
+        signal: EXTI11
+      - pin: PG15
+        signal: EXTI15
+      - pin: PH11
+        signal: EXTI11
+      - pin: PH15
+        signal: EXTI15
+      - pin: PI11
+        signal: EXTI11
+      - pin: PI15
+        signal: EXTI15
+      - pin: PJ11
+        signal: EXTI11
+      - pin: PJ15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -326,38 +406,78 @@ cores:
             field: ADC3EN
       block: adc_v2/ADC
       pins:
-      - pin: PF3
-        signal: IN9
-      - pin: PF4
-        signal: IN14
-      - pin: PF7
-        signal: IN5
-      - pin: PF6
-        signal: IN4
-      - pin: PF5
-        signal: IN15
-      - pin: PF10
-        signal: IN8
-      - pin: PF9
-        signal: IN7
-      - pin: PF8
-        signal: IN6
-      - pin: PC3
-        signal: IN13
+      - pin: PA0
+        signal: IN0
+      - pin: PA1
+        signal: IN1
+      - pin: PA2
+        signal: IN2
+      - pin: PA3
+        signal: IN3
+      - pin: PA11
+        signal: EXTI11
+      - pin: PA15
+        signal: EXTI15
+      - pin: PB11
+        signal: EXTI11
+      - pin: PB15
+        signal: EXTI15
       - pin: PC0
         signal: IN10
       - pin: PC1
         signal: IN11
       - pin: PC2
         signal: IN12
-      - pin: PA1
-        signal: IN1
-      - pin: PA0
-        signal: IN0
-      - pin: PA2
-        signal: IN2
-      - pin: PA3
-        signal: IN3
+      - pin: PC3
+        signal: IN13
+      - pin: PC11
+        signal: EXTI11
+      - pin: PC15
+        signal: EXTI15
+      - pin: PD11
+        signal: EXTI11
+      - pin: PD15
+        signal: EXTI15
+      - pin: PE11
+        signal: EXTI11
+      - pin: PE15
+        signal: EXTI15
+      - pin: PF3
+        signal: IN9
+      - pin: PF4
+        signal: IN14
+      - pin: PF5
+        signal: IN15
+      - pin: PF6
+        signal: IN4
+      - pin: PF7
+        signal: IN5
+      - pin: PF8
+        signal: IN6
+      - pin: PF9
+        signal: IN7
+      - pin: PF10
+        signal: IN8
+      - pin: PF11
+        signal: EXTI11
+      - pin: PF15
+        signal: EXTI15
+      - pin: PG11
+        signal: EXTI11
+      - pin: PG15
+        signal: EXTI15
+      - pin: PH11
+        signal: EXTI11
+      - pin: PH15
+        signal: EXTI15
+      - pin: PI11
+        signal: EXTI11
+      - pin: PI15
+        signal: EXTI15
+      - pin: PJ11
+        signal: EXTI11
+      - pin: PJ15
+        signal: EXTI15
       interrupts:
         GLOBAL: ADC
       dma_channels:
@@ -470,6 +590,26 @@ cores:
         signal: OUT1
       - pin: PA5
         signal: OUT2
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
+      - pin: PD9
+        signal: EXTI9
+      - pin: PE9
+        signal: EXTI9
+      - pin: PF9
+        signal: EXTI9
+      - pin: PG9
+        signal: EXTI9
+      - pin: PH9
+        signal: EXTI9
+      - pin: PI9
+        signal: EXTI9
+      - pin: PJ9
+        signal: EXTI9
       interrupts:
         GLOBAL: TIM6_DAC
     DBGMCU:
@@ -1707,6 +1847,14 @@ cores:
       - pin: PC9
         signal: MCO_2
         af: 0
+      - pin: PC14
+        signal: OSC32_IN
+      - pin: PC15
+        signal: OSC32_OUT
+      - pin: PH0
+        signal: OSC_IN
+      - pin: PH1
+        signal: OSC_OUT
       interrupts:
         GLOBAL: RCC
     RNG:
@@ -1729,6 +1877,10 @@ cores:
       - pin: PB15
         signal: REFIN
         af: 0
+      - pin: PC13
+        signal: AF1
+      - pin: PI8
+        signal: AF2
       interrupts:
         GLOBAL: TAMP_STAMP
     SAI1:

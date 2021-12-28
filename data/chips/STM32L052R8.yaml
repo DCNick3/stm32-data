@@ -232,38 +232,44 @@ cores:
             register: APB2RSTR
             field: ADCRST
       pins:
-      - pin: PC1
-        signal: IN11
-      - pin: PC0
-        signal: IN10
-      - pin: PC2
-        signal: IN12
-      - pin: PA2
-        signal: IN2
-      - pin: PA5
-        signal: IN5
-      - pin: PB0
-        signal: IN8
       - pin: PA0
         signal: IN0
-      - pin: PA3
-        signal: IN3
-      - pin: PA6
-        signal: IN6
-      - pin: PB1
-        signal: IN9
       - pin: PA1
         signal: IN1
+      - pin: PA2
+        signal: IN2
+      - pin: PA3
+        signal: IN3
       - pin: PA4
         signal: IN4
+      - pin: PA5
+        signal: IN5
+      - pin: PA6
+        signal: IN6
       - pin: PA7
         signal: IN7
+      - pin: PA11
+        signal: EXTI11
+      - pin: PB0
+        signal: IN8
+      - pin: PB1
+        signal: IN9
+      - pin: PB11
+        signal: EXTI11
+      - pin: PC0
+        signal: IN10
+      - pin: PC1
+        signal: IN11
+      - pin: PC2
+        signal: IN12
+      - pin: PC3
+        signal: IN13
       - pin: PC4
         signal: IN14
       - pin: PC5
         signal: IN15
-      - pin: PC3
-        signal: IN13
+      - pin: PC11
+        signal: EXTI11
       interrupts: {}
       dma_channels:
         ADC:
@@ -277,8 +283,16 @@ cores:
       address: 0x40010018
       pins:
       - pin: PA0
+        signal: INM
+      - pin: PA0
         signal: OUT
         af: 7
+      - pin: PA1
+        signal: INP
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
       - pin: PA6
         signal: OUT
         af: 7
@@ -291,14 +305,32 @@ cores:
       address: 0x4001001c
       pins:
       - pin: PA2
+        signal: INM
+      - pin: PA2
         signal: OUT
         af: 7
+      - pin: PA3
+        signal: INP
+      - pin: PA4
+        signal: INM
+      - pin: PA5
+        signal: INM
       - pin: PA7
         signal: OUT
         af: 7
       - pin: PA12
         signal: OUT
         af: 7
+      - pin: PB3
+        signal: INM
+      - pin: PB4
+        signal: INP
+      - pin: PB5
+        signal: INP
+      - pin: PB6
+        signal: INP
+      - pin: PB7
+        signal: INP
       interrupts:
         GLOBAL: ADC1_COMP
     CRC:
@@ -346,6 +378,12 @@ cores:
       pins:
       - pin: PA4
         signal: OUT1
+      - pin: PA9
+        signal: EXTI9
+      - pin: PB9
+        signal: EXTI9
+      - pin: PC9
+        signal: EXTI9
       interrupts:
         GLOBAL: TIM6_DAC
       dma_channels:
@@ -497,9 +535,6 @@ cores:
       - pin: PB11
         signal: SDA
         af: 6
-      - pin: PB12
-        signal: SMBA
-        af: 5
       - pin: PB13
         signal: SCL
         af: 5
@@ -651,6 +686,14 @@ cores:
       - pin: PA9
         signal: MCO
         af: 0
+      - pin: PC14
+        signal: OSC32_IN
+      - pin: PC15
+        signal: OSC32_OUT
+      - pin: PH0
+        signal: OSC_IN
+      - pin: PH1
+        signal: OSC_OUT
       interrupts: {}
     RNG:
       address: 0x40025000
@@ -668,6 +711,8 @@ cores:
     RTC:
       address: 0x40002800
       pins:
+      - pin: PA0
+        signal: TAMP2
       - pin: PB14
         signal: OUT_ALARM
         af: 2
@@ -677,6 +722,14 @@ cores:
       - pin: PB15
         signal: REFIN
         af: 2
+      - pin: PC13
+        signal: OUT_ALARM
+      - pin: PC13
+        signal: OUT_CALIB
+      - pin: PC13
+        signal: TAMP1
+      - pin: PC13
+        signal: TS
       interrupts:
         GLOBAL: RTC
     SPI1:
@@ -1181,6 +1234,10 @@ cores:
             register: APB1RSTR
             field: USBRST
       pins:
+      - pin: PA11
+        signal: DM
+      - pin: PA12
+        signal: DP
       - pin: PA13
         signal: NOE
         af: 2
